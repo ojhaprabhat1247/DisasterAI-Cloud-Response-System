@@ -1,0 +1,1618 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+  color: #0b1d38;
+  background: #ffffff;
+  font-synthesis: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #ffffff;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  transition: 0.2s ease;
+}
+
+button {
+  cursor: pointer;
+}
+
+.site,
+.reportSite {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* =====================================================
+   FIXED NAVBAR
+===================================================== */
+
+.navbar {
+  width: 100%;
+  height: 76px;
+
+  padding: 0 5%;
+
+  display: grid;
+  grid-template-columns: 280px 1fr auto;
+  align-items: center;
+  gap: 30px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  box-shadow: 0 3px 15px rgba(15, 35, 60, 0.05);
+}
+
+
+/* Prevent content from hiding behind navbar */
+
+
+
+/* BRAND */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 265px;
+}
+
+.brandMark {
+  font-size: 34px;
+}
+
+.brand h2 {
+  margin: 0;
+
+  font-size: 27px;
+  font-weight: 800;
+
+  color: #0b1d38;
+
+  letter-spacing: -0.8px;
+}
+
+.brand h2 span {
+  color: #1976f3;
+}
+
+.brand p {
+  margin: 2px 0 0;
+
+  color: #63748a;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+
+/* NAV LINKS */
+
+.navLinks {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+
+  height: 100%;
+}
+
+.navLinks a {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+
+  color: #21324c;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  position: relative;
+}
+
+.navLinks a:hover,
+.navLinks a.active {
+  color: #1677ff;
+}
+
+.navLinks a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 3px;
+
+  border-radius: 5px;
+
+  background: #1677ff;
+}
+
+
+/* NAV ACTIONS */
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.language,
+.authorityBtn,
+.sosBtn {
+  height: 45px;
+
+  border-radius: 7px;
+
+  padding: 0 14px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.language,
+.authorityBtn {
+  border: 1px solid #ced8e5;
+
+  background: white;
+
+  color: #162742;
+}
+
+.authorityBtn:hover {
+  background: #f3f7fc;
+}
+
+.sosBtn {
+  padding: 0 19px;
+
+  border: 0;
+
+  background: #e63333;
+
+  color: white;
+}
+
+.sosBtn:hover {
+  background: #c72525;
+}
+
+
+/* =====================================================
+   HOME HERO
+===================================================== */
+.hero {
+  min-height: calc(100vh - 76px);
+}
+.hero {
+  
+  width: 100%;
+
+  min-height: calc(100vh - 76px);
+
+  padding: 48px 5%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(650px, 1.05fr)
+    minmax(450px, 0.95fr);
+
+  gap: 40px;
+
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 20, 36, 0.94) 0%,
+      rgba(3, 20, 36, 0.82) 34%,
+      rgba(3, 20, 36, 0.48) 60%,
+      rgba(3, 20, 36, 0.18) 100%
+    ),
+    url("/disaster-hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* HERO LEFT */
+
+.heroContent {
+  width: 100%;
+  max-width: 930px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* EMPTY RIGHT SIDE */
+
+.heroEmptySide {
+  width: 100%;
+  min-height: 560px;
+}
+
+
+/* HERO BADGE */
+
+.heroBadge {
+  width: fit-content;
+
+  padding: 8px 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  background: rgba(14, 35, 54, 0.58);
+
+  border-radius: 30px;
+
+  backdrop-filter: blur(7px);
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* HERO HEADING */
+
+.hero h1 {
+  margin: 17px 0 14px;
+
+  font-size: clamp(46px, 4.4vw, 72px);
+
+  line-height: 1.03;
+
+  letter-spacing: -2.5px;
+
+  color: white;
+
+  font-weight: 800;
+
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.35);
+}
+
+.hero h1 span {
+  color: #2488ff;
+}
+
+
+/* HERO DESCRIPTION */
+
+.heroText {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #edf4fb;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* HERO BUTTONS */
+
+.heroButtons {
+  display: flex;
+
+  gap: 14px;
+
+  margin-top: 26px;
+}
+
+.primaryBtn,
+.outlineBtn {
+  min-height: 52px;
+
+  padding: 0 23px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.primaryBtn {
+  border: 0;
+
+  background: #147df5;
+
+  color: white;
+}
+
+.primaryBtn:hover {
+  background: #086cdf;
+
+  transform: translateY(-2px);
+}
+
+.outlineBtn {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  background: rgba(5, 24, 42, 0.38);
+
+  color: white;
+
+  backdrop-filter: blur(5px);
+}
+
+.outlineBtn:hover {
+  background: white;
+
+  color: #0b1d38;
+}
+
+
+/* =====================================================
+   DISASTER QUICK CARDS
+===================================================== */
+
+.disasterCards {
+  margin-top: 25px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+}
+
+.disasterCard {
+  min-height: 120px;
+
+  padding: 17px;
+
+  text-align: left;
+
+  text-decoration: none;
+
+  color: white;
+
+  border-radius: 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  background: rgba(22, 49, 70, 0.68);
+
+  backdrop-filter: blur(7px);
+}
+
+.disasterCard:hover {
+  background: rgba(33, 71, 101, 0.8);
+
+  transform: translateY(-3px);
+}
+
+.disasterIcon {
+  font-size: 31px;
+}
+
+.disasterCard h3 {
+  margin: 8px 0 4px;
+
+  font-size: 16px;
+}
+
+.disasterCard p {
+  margin: 0;
+
+  color: #d2deea;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.featuresSection {
+  width: 100%;
+
+  padding: 55px 5%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+
+  background: #f7f9fc;
+}
+
+.featureCard {
+  min-height: 180px;
+
+  padding: 28px;
+
+  display: flex;
+
+  gap: 18px;
+
+  align-items: flex-start;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  border: 1px solid #e5eaf0;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
+}
+
+.featureIcon {
+  font-size: 34px;
+}
+
+.featureCard h3 {
+  margin: 0 0 10px;
+
+  font-size: 20px;
+
+  font-weight: 800;
+
+  color: #10213a;
+}
+
+.featureCard p {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  color: #62748a;
+}
+
+
+/* =====================================================
+   OPERATIONS / LIVE MAP
+===================================================== */
+
+.operationsSection {
+  padding: 30px 6.5% 60px;
+
+  display: grid;
+
+  grid-template-columns: 1.55fr 1fr;
+
+  gap: 18px;
+
+  background: #ffffff;
+}
+
+.mapPanel,
+.alertsPanel {
+  border: 1px solid #dee7f1;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+
+/* MAP */
+
+.mapPanel {
+  min-height: 280px;
+
+  display: grid;
+
+  grid-template-columns: 38% 62%;
+
+  background: #eef7ff;
+}
+
+.mapInfo {
+  padding: 28px 22px;
+
+  display: flex;
+
+  gap: 14px;
+
+  align-items: flex-start;
+}
+
+.mapIcon {
+  font-size: 38px;
+}
+
+.mapInfo h2 {
+  margin: 0 0 7px;
+
+  font-size: 23px;
+}
+
+.mapInfo p {
+  margin: 0;
+
+  color: #52677e;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+.mapInfo button {
+  margin-top: 16px;
+
+  padding: 12px 17px;
+
+  border: 0;
+
+  border-radius: 6px;
+
+  background: #1677ff;
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.mapInfo button:hover {
+  background: #086cdf;
+}
+
+
+/* MAP PREVIEW */
+
+.mapPreview {
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 280px;
+
+  background:
+    linear-gradient(
+      rgba(235, 242, 248, 0.75),
+      rgba(235, 242, 248, 0.75)
+    ),
+    repeating-linear-gradient(
+      35deg,
+      transparent,
+      transparent 28px,
+      #ccd7e4 29px,
+      transparent 31px
+    ),
+    #e9f2f7;
+}
+
+.roads {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      25deg,
+      transparent 47%,
+      #c5d3e1 48%,
+      #c5d3e1 50%,
+      transparent 51%
+    ),
+    linear-gradient(
+      -25deg,
+      transparent 47%,
+      #d6e0ea 48%,
+      #d6e0ea 50%,
+      transparent 51%
+    );
+
+  background-size: 130px 100px;
+}
+
+.pin {
+  position: absolute;
+
+  font-size: 19px;
+}
+
+.pin1 {
+  top: 27%;
+  left: 18%;
+}
+
+.pin2 {
+  top: 61%;
+  left: 66%;
+}
+
+.pin3 {
+  top: 68%;
+  left: 34%;
+}
+
+.mapMessage {
+  position: absolute;
+
+  left: 50%;
+  top: 46%;
+
+  transform: translate(-50%, -50%);
+
+  padding: 10px 14px;
+
+  border-radius: 8px;
+
+  background: white;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+
+  color: #253b55;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+}
+
+.zoomButtons {
+  position: absolute;
+
+  right: 10px;
+  bottom: 10px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.zoomButtons button {
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid #d4dce6;
+
+  background: white;
+
+  font-size: 16px;
+}
+
+
+/* =====================================================
+   EMERGENCY ALERTS
+===================================================== */
+
+.alertsPanel {
+  padding: 20px;
+
+  background: #fff7f7;
+}
+
+.alertsHeader {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 14px;
+}
+
+.alertsHeader h2 {
+  margin: 0;
+
+  color: #b42121;
+
+  font-size: 19px;
+}
+
+.alertsHeader p {
+  margin: 3px 0 0;
+
+  color: #68788d;
+
+  font-size: 12px;
+}
+
+.alertsHeader button {
+  border: 0;
+
+  background: transparent;
+
+  color: #1677ff;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.alertRow {
+  min-height: 44px;
+
+  margin-top: 8px;
+
+  padding: 8px 10px;
+
+  display: grid;
+
+  grid-template-columns: 1fr auto auto;
+
+  gap: 10px;
+
+  align-items: center;
+
+  border: 1px solid #f1dddd;
+
+  border-radius: 6px;
+
+  background: white;
+
+  font-size: 11px;
+}
+
+.alertRow small {
+  color: #68788d;
+}
+
+.alertRow b {
+  padding: 3px 7px;
+
+  border-radius: 20px;
+
+  color: white;
+
+  font-size: 10px;
+}
+
+.high {
+  background: #f02f4c;
+}
+
+.medium {
+  background: #ff982f;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+  padding: 50px 6.5%;
+
+  display: grid;
+
+  grid-template-columns: 2fr repeat(4, 1fr);
+
+  gap: 40px;
+
+  background: #071b31;
+
+  color: white;
+}
+
+.footerBrand h2 {
+  margin: 0;
+
+  font-size: 26px;
+}
+
+.footerBrand h2 span {
+  color: #1687ff;
+}
+
+.footerBrand > p {
+  margin: 4px 0 0;
+
+  color: #b7c4d2;
+
+  font-size: 11px;
+}
+
+.footerDescription {
+  max-width: 260px;
+
+  margin-top: 17px !important;
+
+  line-height: 1.6;
+}
+
+footer h4 {
+  margin: 0 0 11px;
+
+  font-size: 14px;
+}
+
+footer a {
+  display: block;
+
+  margin: 7px 0;
+
+  color: #b5c1cf;
+
+  text-decoration: none;
+
+  font-size: 12px;
+}
+
+footer a:hover {
+  color: white;
+}
+
+.socials {
+  display: flex;
+
+  gap: 7px;
+}
+
+.socials button {
+  width: 28px;
+  height: 28px;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: #153453;
+
+  color: white;
+
+  font-size: 10px;
+}
+
+.socials button:hover {
+  background: #1677ff;
+}
+
+.copyright {
+  margin-top: 23px;
+
+  color: #8293a7;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   GO TO TOP
+===================================================== */
+
+.goTopBtn {
+  position: fixed;
+
+  right: 28px;
+  bottom: 28px;
+
+  z-index: 999;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #1677ff;
+
+  color: white;
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+  box-shadow: 0 6px 20px rgba(22, 119, 255, 0.35);
+}
+
+.goTopBtn:hover {
+  background: #0867db;
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 10px 25px rgba(22, 119, 255, 0.45);
+}
+
+
+/* =====================================================
+   REPORT PAGE
+===================================================== */
+
+.reportPage {
+  position: relative;
+
+  width: 100%;
+
+  min-height: calc(100vh - 76px);
+
+  padding: 50px 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    url("/disaster-hero.jpg")
+    center center / cover
+    no-repeat;
+}
+
+.reportOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(3, 18, 34, 0.72);
+}
+
+.reportPageContent {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 760px;
+}
+
+.reportPageHeader {
+  margin-bottom: 28px;
+
+  text-align: center;
+
+  color: white;
+}
+
+.emergencyLabel {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #ff6363;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.reportPageHeader h1 {
+  margin: 0;
+
+  font-size: 48px;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+.reportPageHeader p {
+  margin: 12px auto 0;
+
+  max-width: 620px;
+
+  color: #d7e2ef;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* REPORT FORM CARD */
+
+.reportPageCard {
+  width: 100%;
+
+  padding: 34px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+
+  backdrop-filter: blur(10px);
+}
+
+.reportPageCardHeading {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 16px;
+
+  margin-bottom: 24px;
+}
+
+.reportPageIcon {
+  width: 54px;
+  height: 54px;
+
+  flex: 0 0 54px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 12px;
+
+  background: #ffe6e6;
+
+  font-size: 28px;
+}
+
+.reportPageCardHeading h2 {
+  margin: 0;
+
+  color: #10213a;
+
+  font-size: 25px;
+
+  font-weight: 800;
+}
+
+.reportPageCardHeading p {
+  margin: 7px 0 0;
+
+  color: #5c6f84;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+.reportPageCard label {
+  display: block;
+
+  margin: 18px 0 8px;
+
+  color: #13233c;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* LOCATION */
+
+.locationRow {
+  width: 100%;
+
+  min-height: 48px;
+
+  display: flex;
+
+  overflow: hidden;
+
+  border: 1px solid #cbd6e2;
+
+  border-radius: 8px;
+
+  background: white;
+}
+
+.fakeInput {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 14px;
+
+  color: #6b7c90;
+
+  font-size: 13px;
+}
+
+.locationRow button {
+  width: 110px;
+
+  border: 0;
+
+  background: #1677ff;
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.locationRow button:hover {
+  background: #086cdf;
+}
+
+.locationRow button:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+}
+
+
+/* FORM INPUTS */
+
+.formControl {
+  width: 100%;
+
+  min-height: 48px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #cbd6e2;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background: white;
+
+  color: #22324a;
+
+  font-size: 13px;
+}
+
+.formControl:focus,
+.reportFileInput:focus {
+  border-color: #1677ff;
+
+  box-shadow: 0 0 0 3px rgba(22, 119, 255, 0.1);
+}
+
+textarea.formControl {
+  min-height: 120px;
+
+  resize: vertical;
+}
+
+
+/* MEDIA + VOICE */
+
+.reportMediaGrid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+
+  margin-top: 2px;
+}
+
+.reportFileInput {
+  width: 100%;
+
+  min-height: 48px;
+
+  padding: 10px;
+
+  border: 1px solid #cbd6e2;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background: white;
+
+  font-size: 13px;
+}
+
+.selectedFile {
+  margin: 7px 0 0;
+
+  color: #198754;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.voiceRecordBtn,
+.voiceStopBtn {
+  width: 100%;
+
+  min-height: 48px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.voiceRecordBtn {
+  border: 1px solid #cbd6e2;
+
+  background: #f8fafc;
+
+  color: #17304f;
+}
+
+.voiceRecordBtn:hover {
+  background: #edf4ff;
+
+  border-color: #1677ff;
+}
+
+.voiceStopBtn {
+  border: 1px solid #ef4444;
+
+  background: #fff1f1;
+
+  color: #d62828;
+}
+
+
+/* AUDIO PREVIEW */
+
+.audioPreview {
+  margin-top: 16px;
+
+  padding: 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  border: 1px solid #d9e3ee;
+
+  border-radius: 9px;
+
+  background: #f8fafc;
+}
+
+.audioPreview span {
+  color: #198754;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.audioPreview audio {
+  flex: 1;
+
+  height: 36px;
+}
+
+.audioPreview button {
+  border: none;
+
+  background: transparent;
+
+  color: #dc2626;
+
+  font-weight: 700;
+}
+
+
+/* SUBMIT */
+
+.submitBtn {
+  width: 100%;
+
+  height: 54px;
+
+  margin-top: 24px;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  background: linear-gradient(
+    90deg,
+    #e63333,
+    #f04444
+  );
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 800;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(230, 51, 51, 0.25);
+}
+
+.secureText {
+  margin: 13px 0 0;
+
+  text-align: center;
+
+  color: #65758a;
+
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLET
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .navLinks {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .heroContent {
+    max-width: 850px;
+  }
+
+  .heroEmptySide {
+    display: none;
+  }
+
+  .operationsSection {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =====================================================
+   RESPONSIVE - MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    height: 68px;
+
+    padding: 0 4%;
+
+    grid-template-columns: 1fr auto;
+  }
+
+
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand p,
+  .authorityBtn,
+  .language {
+    display: none;
+  }
+
+  .brand h2 {
+    font-size: 20px;
+  }
+
+  .brandMark {
+    font-size: 28px;
+  }
+
+  .sosBtn {
+    height: 38px;
+
+    padding: 0 10px;
+
+    font-size: 10px;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: calc(100vh - 68px);
+
+    padding: 40px 5%;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .heroText {
+    font-size: 14px;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+  }
+
+  .primaryBtn,
+  .outlineBtn {
+    width: 100%;
+  }
+
+  .disasterCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* FEATURES */
+
+  .featuresSection {
+    grid-template-columns: 1fr;
+
+    padding: 40px 5%;
+  }
+
+
+  /* MAP */
+
+  .operationsSection {
+    padding: 25px 5% 45px;
+  }
+
+  .mapPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .mapPreview {
+    min-height: 230px;
+  }
+
+
+  /* ALERTS */
+
+  .alertRow {
+    grid-template-columns: 1fr auto;
+  }
+
+  .alertRow small {
+    display: none;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+
+  /* REPORT */
+
+  .reportPage {
+    min-height: calc(100vh - 68px);
+
+    padding: 30px 14px;
+  }
+
+  .reportPageHeader h1 {
+    font-size: 36px;
+  }
+
+  .reportPageHeader p {
+    font-size: 14px;
+  }
+
+  .reportPageCard {
+    padding: 24px 18px;
+  }
+
+  .reportPageCardHeading h2 {
+    font-size: 21px;
+  }
+
+  .reportMediaGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .audioPreview {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .locationRow {
+    flex-direction: column;
+  }
+
+  .locationRow button {
+    width: 100%;
+
+    min-height: 44px;
+  }
+
+  .fakeInput {
+    min-height: 48px;
+  }
+
+  .goTopBtn {
+    width: 44px;
+    height: 44px;
+
+    right: 18px;
+    bottom: 18px;
+  }
+}
+@media (max-width: 700px) {
+  .navbar {
+    height: 68px;
+  }
+
+  .hero {
+    min-height: 100vh;
+    padding: 105px 5% 40px;
+  }
+
+  .reportPage {
+    min-height: 100vh;
+    padding: 100px 14px 30px;
+  }
+}

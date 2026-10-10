@@ -1,0 +1,44 @@
+# =========================
+# Frontend
+# =========================
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# =========================
+# Backend / Python
+# =========================
+backend/.venv/
+backend/venv/
+backend/__pycache__/
+backend/**/*.pyc
+*.pyc
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+*.log
+npm-debug.log*
+
+node_modules/
